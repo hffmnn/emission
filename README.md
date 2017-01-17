@@ -28,7 +28,14 @@ Want to know more about Emission? Read the [mobile](http://artsy.github.io/blog/
    * `$ brew install watchman --HEAD`
 3. Install NPM modules: `$ yarn install`
 4. Install CocoaPods: `$ gem install cocoapods`
-5. Install Pods: `$ cd Example && ARTSY_STAFF_MEMBER=true pod install`
+5. Install Pods: `$ cd Example && ARTSY_STAFF_MEMBER=true pod install` // this will fail
+6. Apply `patch.diff` in `~/.cocoapods/repos/artsy`:
+    `pushd ..`
+    `$ cp patch.diff ~/.cocoapods/repos/artsy`
+    `$ pushd ~/.cocoapods/repos/artsy`
+    `$ git apply patch.diff`
+    `$ rm patch.diff`
+    `$ popd && popd && pod install`
 
 Why Yarn? See [our JS glossary for Yarn][glossary-yarn],
 
