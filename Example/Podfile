@@ -11,9 +11,9 @@ target 'Emission' do
 
   # Got to make it look right
   if ENV['ARTSY_STAFF_MEMBER'] != nil || ENV['CI'] != nil
-    pod 'Artsy+UIFonts'
+    pod 'Artsy+UIFonts', '>= 1.1.0'
   else
-    pod 'Artsy+UIFonts'
+    pod 'Artsy+UIFonts', '>= 1.1.0'
   end
 
   # For easy updating of the JS
@@ -30,8 +30,7 @@ target 'Emission' do
 
   # Authiung with Artsy
   pod 'Artsy+Authentication', :subspecs => %w(email),
-                              :git => 'https://github.com/artsy/Artsy-Authentication.git',
-                              :branch => 'fetch-user-details'
+                              :git => 'https://github.com/artsy/Artsy-Authentication.git'
 
   target 'EmissionTests' do
     inherit! :search_paths

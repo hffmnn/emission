@@ -1,0 +1,64 @@
+diff --git a/Artsy+UIFonts/1.0.0/Artsy+UIFonts.podspec b/Artsy+UIFonts/1.0.0/Artsy+UIFonts.podspec
+index 602439d..3d96963 100644
+--- a/Artsy+UIFonts/1.0.0/Artsy+UIFonts.podspec
++++ b/Artsy+UIFonts/1.0.0/Artsy+UIFonts.podspec
+@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
+   s.homepage         = "https://github.com/artsy/Artsy-UIFonts"
+   s.license          = 'Proprietary'
+   s.author           = { "Orta" => "orta.therox@gmail.com" }
+-  s.source           = { :git => "https://github.com/artsy/Artsy-UIFonts.git", :tag => s.version }
++  s.source           = { :git => "https://github.com/artsy/Artsy-OSSUIFonts.git", :tag => s.version }
+   s.social_media_url = 'https://twitter.com/artsy'
+ 
+   s.platform     = :ios, '7.0'
+diff --git a/Artsy+UIFonts/1.1.0/Artsy+UIFonts.podspec b/Artsy+UIFonts/1.1.0/Artsy+UIFonts.podspec
+index d3897a5..de92eb8 100644
+--- a/Artsy+UIFonts/1.1.0/Artsy+UIFonts.podspec
++++ b/Artsy+UIFonts/1.1.0/Artsy+UIFonts.podspec
+@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
+   s.homepage         = "https://github.com/artsy/Artsy-UIFonts"
+   s.license          = 'Proprietary'
+   s.author           = { "Orta" => "orta.therox@gmail.com" }
+-  s.source           = { :git => "https://github.com/artsy/Artsy-UIFonts.git", :tag => s.version }
++  s.source           = { :git => "https://github.com/artsy/Artsy-OSSUIFonts.git", :tag => s.version }
+   s.social_media_url = 'https://twitter.com/artsy'
+ 
+   s.platform     = :ios, '7.0'
+diff --git a/Artsy+UIFonts/1.1.1/Artsy+UIFonts.podspec b/Artsy+UIFonts/1.1.1/Artsy+UIFonts.podspec
+index 0b2e8d5..0db7273 100644
+--- a/Artsy+UIFonts/1.1.1/Artsy+UIFonts.podspec
++++ b/Artsy+UIFonts/1.1.1/Artsy+UIFonts.podspec
+@@ -1,11 +1,11 @@
+ Pod::Spec.new do |s|
+   s.name             = "Artsy+UIFonts"
+-  s.version          = "1.1.1"
++  s.version          = "1.1.0"
+   s.summary          = "The fonts for Artsy apps + UIFont categories."
+   s.homepage         = "https://github.com/artsy/Artsy-UIFonts"
+   s.license          = 'Proprietary'
+   s.author           = { "Orta" => "orta.therox@gmail.com" }
+-  s.source           = { :git => "https://github.com/artsy/Artsy-UIFonts.git", :tag => s.version }
++  s.source           = { :git => "https://github.com/artsy/Artsy-OSSUIFonts.git", :tag => s.version }
+   s.social_media_url = 'https://twitter.com/artsy'
+ 
+   s.ios.deployment_target = '7.0'
+diff --git a/Artsy-UIButtons/2.0.3/Artsy-UIButtons.podspec b/Artsy-UIButtons/2.0.3/Artsy-UIButtons.podspec
+index 35614e1..9188262 100644
+--- a/Artsy-UIButtons/2.0.3/Artsy-UIButtons.podspec
++++ b/Artsy-UIButtons/2.0.3/Artsy-UIButtons.podspec
+@@ -15,10 +15,10 @@ Pod::Spec.new do |s|
+ 
+   s.frameworks = 'UIKit'
+   s.dependency 'Artsy+UIColors', '~> 3.0'
+-  if ENV['ARTSY_STAFF_MEMBER'] != nil || ENV['CI'] != nil
+-    s.dependency 'Artsy+UIFonts'
+-  else
+-    s.dependency 'Artsy+OSSUIFonts'
+-  end
++  # if ENV['ARTSY_STAFF_MEMBER'] != nil || ENV['CI'] != nil
++    s.dependency 'Artsy+UIFonts', '>= 1.1.0'
++  # else
++  #   s.dependency 'Artsy+OSSUIFonts'
++  # end
+   s.dependency 'UIView+BooleanAnimations'
+ end
